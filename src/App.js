@@ -3,7 +3,7 @@ import axios from 'axios';
 import "./App.css"
 
 function App() {
-  const [inputText, setInputText] = useState('What is weather today?');
+  const [inputText, setInputText] = useState('');
   const [ollamaModel, setOllamaModel] = useState('');
   const [response, setResponse] = useState([]);
   const [responseLoader, setResponseLoader] = useState(false);
@@ -81,6 +81,7 @@ function App() {
       <div className='flex-generic ask-box'>
         <input
           className='ask-box-input'
+          placeholder='Enter Question'
           type="text"
           value={inputText}
           onChange={e => setInputText(e.target.value)}
