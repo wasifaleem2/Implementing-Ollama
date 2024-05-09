@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+## Info
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Basic app to integrate ollama to interact throuh ui.
+I used three models phi3:latest & gemma:2b &tinydolphin:latest
+
+## Author 
+
+Wasif Aleem
 
 ## Available Scripts
 

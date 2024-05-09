@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+  background-color: rgb(201, 201, 201);
+  color: white;
+  width: auto;
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-generic{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.model-select{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 17%;
+  height: 4%;
+}
+.ask-box{
+  position: absolute;
+  bottom: 40px;
+  width: 96%;
+  margin: 2%;
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+.ask-box-input{
+  width: 85%;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+}
+.ask-box-input:focus{
+  outline: none;
+}
+.ask-box-btn{
+  width: 13%;
+  height: 30px;
+  background-color: rgb(17, 145, 53);
   color: white;
+  border: none;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.response-container{
+  height:76%;
+  overflow-y: auto;
+}
+.question{
+  margin: 2%;
+  background-color: #555;
+  width: auto;
+  margin: 0% 2% 2% 2%;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.response-box{
+  width: auto;
+  margin: 2%;;
+  padding: 10px;
+  /* height: 100px; */
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* loader */
+.loader {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  position: relative;
+  bottom: 100px;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  border: 5px solid #545e70;
+  border-radius: 50%;
+  position: absolute;
+  animation: animloader 2s linear infinite;
+}
+.loader::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
+}
+
+
+/* scroolbar edit  */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(201, 201, 201);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
